@@ -71,7 +71,7 @@ interpretation\_gap\_engine/
 ├── requirements.txt
 └── README.md
 ```
-
+<br> </br>
 ## Tech Stack
 
 |Layer|Library|
@@ -82,6 +82,7 @@ interpretation\_gap\_engine/
 |UI|`streamlit`|
 |Charts|`plotly`|
 |Parallelism|`concurrent.futures.ThreadPoolExecutor`|
+
 <br> </br>
 ## Phase 2 Roadmap
 
