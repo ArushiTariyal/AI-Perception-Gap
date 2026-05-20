@@ -1,9 +1,9 @@
-# ⌖ Interpretation Gap Engine
+# ⌖ Interpretation Gap Engine {AI Perception Gap}
 
 A multi-agent AI system that demonstrates how the same text can be interpreted
 radically differently depending on an agent's worldview, goals, and priors.
 
-\---
+\
 
 ## What It Does
 
@@ -28,7 +28,7 @@ radically differently depending on an agent's worldview, goals, and priors.
    * Semantic dimension radar
    * PCA embedding scatter
 
-\---
+\
 
 ## Setup
 
@@ -64,7 +64,7 @@ streamlit run app.py
 
 Paste your API key in the sidebar. It stays in your browser session only.
 
-\---
+\
 
 ## Project Structure
 
@@ -78,31 +78,31 @@ interpretation\_gap\_engine/
 └── README.md
 ```
 
-\---
+\
 
 ## Tech Stack
 
 |Layer|Library|
 |-|-|
-|LLM|Gemini, Ollama, Groq|
+|LLM|`Gemini, Ollama, Groq`|
 |Embeddings|`sentence-transformers` (all-MiniLM-L6-v2)|
 |Similarity|`sklearn` cosine\_similarity|
 |UI|`streamlit`|
 |Charts|`plotly`|
 |Parallelism|`concurrent.futures.ThreadPoolExecutor`|
 
-\---
+\
 
 ## Phase 2 Roadmap
 
-* \[ ] **Memory** — agents remember past prompts via ChromaDB/FAISS
-* \[ ] **Debate mode** — agents challenge each other's hidden assumptions
-* \[ ] **NLI contradiction detection** — find logical conflicts using DeBERTa
-* \[ ] **Interpretation trees** — multi-layer output (primary/secondary/moral)
-* \[ ] **Semantic graphs** — NetworkX node graphs of concept relationships
-* \[ ] **Belief evolution** — track how interpretations shift over a conversation
+* \[ ] **Memory** - agents remember past prompts via ChromaDB/FAISS
+* \[ ] **Debate mode** - agents challenge each other's hidden assumptions
+* \[ ] **NLI contradiction detection** - find logical conflicts using DeBERTa
+* \[ ] **Interpretation trees** - multi-layer output (primary/secondary/moral)
+* \[ ] **Semantic graphs** - NetworkX node graphs of concept relationships
+* \[ ] **Belief evolution** - track how interpretations shift over a conversation
 
-\---
+\
 
 ## Why This Project Is Strong
 
