@@ -2,7 +2,6 @@
 
 A multi-agent AI system that demonstrates how the same text can be interpreted
 radically differently depending on an agent's worldview, goals, and priors.
-
 <br> </br>
 ## What It Does
 
@@ -26,9 +25,7 @@ radically differently depending on an agent's worldview, goals, and priors.
    * Divergence gauge (0–100%)
    * Semantic dimension radar
    * PCA embedding scatter
-
-
-
+<br> </br>
 ## Setup
 
 ### 1\. Clone / download this folder
@@ -62,9 +59,7 @@ streamlit run app.py
 ### 5\. Enter your API key
 
 Paste your API key in the sidebar. It stays in your browser session only.
-
-
-
+<br> </br>
 ## Project Structure
 
 ```
@@ -76,9 +71,7 @@ interpretation\_gap\_engine/
 ├── requirements.txt
 └── README.md
 ```
-
-
-
+<br> </br>
 ## Tech Stack
 
 |Layer|Library|
@@ -89,9 +82,7 @@ interpretation\_gap\_engine/
 |UI|`streamlit`|
 |Charts|`plotly`|
 |Parallelism|`concurrent.futures.ThreadPoolExecutor`|
-
-
-
+<br> </br>
 ## Phase 2 Roadmap
 
 * \[ ] **Memory** - agents remember past prompts via ChromaDB/FAISS
@@ -100,9 +91,7 @@ interpretation\_gap\_engine/
 * \[ ] **Interpretation trees** - multi-layer output (primary/secondary/moral)
 * \[ ] **Semantic graphs** - NetworkX node graphs of concept relationships
 * \[ ] **Belief evolution** - track how interpretations shift over a conversation
-
-
-
+<br> </br>
 ## Why This Project Is Strong
 
 * Touches **AI alignment** and **interpretability** (not just a chatbot)
