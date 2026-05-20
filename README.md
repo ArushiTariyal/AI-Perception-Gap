@@ -3,7 +3,7 @@
 A multi-agent AI system that demonstrates how the same text can be interpreted
 radically differently depending on an agent's worldview, goals, and priors.
 
-
+---
 
 ## What It Does
 
