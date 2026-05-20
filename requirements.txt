@@ -1,0 +1,16 @@
+# UI
+streamlit>=1.35.0
+
+# AI providers
+google-generativeai>=0.5.0    # Gemini (Agent 1) - free tier, no card
+openai>=1.30.0                 # Used for Groq's OpenAI-compatible API (Agent 2)
+requests>=2.31.0               # Used for Ollama local API (Agent 3)
+
+# NLP / embeddings
+sentence-transformers>=2.7.0
+scikit-learn>=1.4.0
+numpy>=1.26.0
+torch>=2.2.0
+
+# Visualization
+plotly>=5.22.0
