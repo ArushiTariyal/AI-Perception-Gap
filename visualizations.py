@@ -24,6 +24,11 @@ DARK_LAYOUT = dict(
     margin=dict(l=20, r=20, t=40, b=20),
 )
 
+def _hex_to_rgba(hex_color: str, alpha: float = 0.16) -> str:
+    h = hex_color.lstrip('#')
+    r, g, b = int(h[0:2], 16), int(h[2:4], 16), int(h[4:6], 16)
+    return f"rgba({r},{g},{b},{alpha})"
+
 
 # ─── 1. Similarity Heatmap ───────────────────────────────────────────────────
 def plot_heatmap(matrix: np.ndarray, agents: list) -> go.Figure:
@@ -172,7 +177,7 @@ def plot_semantic_radar(results: list, agents: list) -> go.Figure:
                 fill="toself",
                 name=agent["label"],
                 line=dict(color=AGENT_COLORS[i], width=2),
-                fillcolor=AGENT_COLORS[i] + "28",  # hex + alpha
+                fillcolor=_hex_to_rgba(AGENT_COLORS[i]),
                 opacity=0.85,
             )
         )
@@ -213,7 +218,10 @@ def plot_embedding_scatter(results: list, agents: list) -> go.Figure:
 
     if embeddings.shape[0] < 2:
         fig = go.Figure()
-        fig.update_layout(**DARK_LAYOUT, title="Not enough data for PCA")
+        fig.update_layout(
+            **DARK_LAYOUT,
+            title=dict(text="Not enough data for PCA", font=dict(color=GOLD), x=0.5),
+        )
         return fig
 
     # PCA to 2D
@@ -264,15 +272,13 @@ def plot_embedding_scatter(results: list, agents: list) -> go.Figure:
         **DARK_LAYOUT,
         title=dict(text="Embedding Space (PCA 2D)", font=dict(color=GOLD), x=0.5),
         xaxis=dict(
-            title=f"PC1 ({var_explained[0]:.1f}%)",
-            titlefont=dict(color=MUTED),
+            title=dict(text=f"PC1 ({var_explained[0]:.1f}%)", font=dict(color=MUTED)),
             tickfont=dict(color=MUTED),
             gridcolor=GRID,
             zeroline=False,
         ),
         yaxis=dict(
-            title=f"PC2 ({var_explained[1]:.1f}% if available)",
-            titlefont=dict(color=MUTED),
+            title=dict(text=f"PC2 ({var_explained[1]:.1f}% if available)", font=dict(color=MUTED)),
             tickfont=dict(color=MUTED),
             gridcolor=GRID,
             zeroline=False,
