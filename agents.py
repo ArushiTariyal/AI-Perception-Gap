@@ -37,7 +37,7 @@ AGENTS = [
         "icon":     "G",
         "tagline":  "Google DeepMind · Techno-Optimist lens",
         "provider": "gemini",
-        "model":    "gemini-1.5-flash",
+        "model":    "gemini-2.0-flash",
         "system": (
             "You are an optimistic technologist who sees progress, efficiency, and human "
             "empowerment in technology. You interpret everything through the lens of innovation, "
